@@ -1,0 +1,22 @@
+name: Deploy root to Blob Storage
+
+on:
+    push:
+        branches: [ master ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: build JS
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+    - run: cat 'import-map.json'
+      name: cat map
+    - name: update import map
+      run: |
+          curl --location --request PATCH 'http://imd.602492b207e34b7bbd7e.germanywestcentral.aksapp.io/import-map.json?env=prod&skip_url_check' \
+          --header 'Accept: application/json' \
+          --header 'Content-Type: application/json' \
+          --data "@import-map.json"

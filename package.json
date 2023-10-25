@@ -1,0 +1,19 @@
+{
+  "name": "shared_dependencies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eyko139/shared_dependencies.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eyko139/shared_dependencies/issues"
+  },
+  "homepage": "https://github.com/eyko139/shared_dependencies#readme"
+}
